@@ -11,14 +11,14 @@ class MinMax extends React.Component {
 
   inc = () => {
     if (this.state.curCount >= max) {
-      this.state.curCount = max - 1;
+      this.setState((maximum) => ({ curCount: maximum.curCount - 1 }));
     }
     this.setState((prevState) => ({ curCount: prevState.curCount + 1 }));
   };
 
   minus = () => {
     if (this.state.curCount <= min) {
-      this.state.curCount = min + 1;
+      this.setState((minimum) => ({ curCount: minimum.curCount + 1 }))
     }
     this.setState((nextState) => ({ curCount: nextState.curCount - 1 }));
   };
@@ -41,3 +41,4 @@ class MinMax extends React.Component {
 }
 
 export default MinMax;
+
